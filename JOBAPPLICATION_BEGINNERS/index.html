@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+serif&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive job portal website</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2 class="navbar-logo"><a href="#">Job Portal</a></h2>
+        <div class="navbar-menu">
+            <a href="#jobs">Jobs</a>
+            <a href="#companies">Companies</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="#blog">Blogs</a>
+            <a href="/signup.html">Sign In</a>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="header-title">
+            FIND YOUR <br> <span>PERFECT JOB</span> <br> EASILY
+        </h1>
+    </header>
+
+    <div class="search-wrapper">
+        <div class="search-box">
+            <div class="search-card">
+                <input class="search-input" type="text" placeholder="Job title or keywords" id="searchInput">
+                <button class="search-button" onclick="searchJobs()">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-box">
+        <div class="filter-dropdown">
+            <select class="filter-select" id="job-level" name="job-level">
+                <option>Job level</option>
+                <option>Entry</option>
+                <option>Mid-Senior</option>
+                <option>Director</option>
+            </select>
+            <select class="filter-select" id="job-function" name="job-function">
+                <option>Job function</option>
+                <option>IT</option>
+                <option>Management</option>
+                <option>Education</option>
+            </select>
+            <select class="filter-select" id="employment" name="employment">
+                <option>Employment</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Contract</option>
+            </select>
+            <select class="filter-select" id="education" name="education">
+                <option>Education</option>
+                <option>High School</option>
+                <option>Bachelor's degree</option>
+                <option>Master's degree</option>
+            </select>
+        </div>
+        <div class="filter-chosen">
+            <div class="chosen-card">
+                Remote<i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Full-time<i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Financial Tech<i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Entry Level<i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="job-list" id="jobs">
+        <div class="job-card" data-job-title="Business Development">
+            <div class="job-name">
+                <img class="job-profile" src="images/tesla.jpeg" alt="Tesla">
+                <div class="job-detail">
+                    <h4>Tesla</h4>
+                    <h3>Business Development</h3>
+                    <p>Business development managers are responsible for driving business growth within a company.                </p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Business Development')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 2 min ago
+            </div>
+        </div>
+        <div class="job-card" data-job-title="Mechanical Engineer">
+            <div class="job-name">
+                <img class="job-profile" src="images/amazon.png" alt="Amazon">
+                <div class="job-detail">
+                    <h4>Amazon</h4>
+                    <h3>Mechanical Engineer</h3>
+                    <p>Self-employment via consultancy and contract work is possible once you’ve built significant experience.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Mechanical Engineer')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 10 hours ago
+            </div>
+        </div>
+        <div class="job-card" data-job-title="Software Engineer">
+            <div class="job-name">
+                <img class="job-profile" src="images/google.jpeg" alt="Google">
+                <div class="job-detail">
+                    <h4>Google</h4>
+                    <h3>Software Engineer</h3>
+                    <p>We are looking for a passionate Software Engineer to design, develop and install software solutions.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Software Engineer')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 1 day ago
+            </div>
+        </div>
+        <div class="job-card" data-job-title="Software Engineer">
+            <div class="job-name">
+                <img class="job-profile" src="images/microsoft.avif" alt="Amazon">
+                <div class="job-detail">
+                    <h4>Microsoft</h4>
+                    <h3>Software Engineer</h3>
+                    <p>We are looking for a passionate Software Engineer to design, develop and install software solutions.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Software Engineer')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 2 days ago
+            </div>
+        </div>    
+        <div class="job-card" data-job-title="Business Development">
+            <div class="job-name">
+                <img class="job-profile" src="images/zoho.png" alt="Tesla">
+                <div class="job-detail">
+                    <h4>Zoho</h4>
+                    <h3>Business Development</h3>
+                    <p>Business development managers are responsible for driving business growth within a company.                </p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Business Development')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 2 min ago
+            </div>
+        </div>
+        <div class="job-card" data-job-title="Business Development">
+            <div class="job-name">
+                <img class="job-profile" src="images/grootan.png" alt="Tesla">
+                <div class="job-detail">
+                    <h4>Grootan</h4>
+                    <h3>Business Development</h3>
+                    <p>Business development managers are responsible for driving business growth within a company.                </p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+                <button class="apply-button" onclick="applyForJob('Business Development')">Apply</button>
+            </div>
+            <div class="job-posted">
+                posted 2 min ago
+            </div>
+        </div>
+    </section>
+    <section class="join">
+        <div class="join-detail">
+            <h1 class="section-title">LET'S START YOUR NEW JOB WITH US</h1>
+            <p>Welcome to our job portal, where you can find and apply for your dream job! Our platform offers a seamless job search experience with tailored filters to match your skills and preferences. Whether you're looking for full-time, part-time, or remote work, we have opportunities across various industries. Create your profile, upload your resume, and start applying today!</p>
+        </div>
+        <a href="apply.html" class="btn">Join Now</a>
+    </section>
+
+    <section class="featured" id="companies">
+        <h1 class="section-title">Featured companies</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis eum perferendis, nemo distinctio reiciendis
+            eveniet.</p>
+        <div class="featured-wrapper">
+            <div class="featured-card">
+                <img class="featured-image" src="images/ebay.png" alt="Ebay">
+                <p>Ebay</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/youtube.jpg" alt="Youtube">
+                <p>Youtube</p>
+                <button class="featured-button">View 1 job</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/amazon.png" alt="Amazon">
+                <p>Amazon</p>
+                <button class="featured-button">View 3 jobs</button>
+            </div>
+            <!-- <div class="featured-card">
+                <img class="featured-image" src="images/tesla.jpeg" alt="Tesla">
+                <p>Tesla</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/tesla.jpeg" alt="Tesla">
+                <p>Tesla</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/tesla.jpeg" alt="Tesla">
+                <p>Tesla</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/tesla.jpeg" alt="Tesla">
+                <p>Tesla</p>
+                <button class="featured-button">View 2 jobs</button>
+            <!-- </div> -->
+            <div class="featured-card">
+                <img class="featured-image" src="images/tesla.jpeg" alt="Tesla">
+                <p>Tesla</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div> 
+            <div class="featured-card">
+                <img class="featured-image" src="images/microsoft.avif" alt="Tesla">
+                <p>Microsoft</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+            <div class="featured-card">
+                <img class="featured-image" src="images/google.jpeg" alt="Google">
+                <p>Google</p>
+                <button class="featured-button">View 2 jobs</button>
+            </div>
+        </div>
+        <h1 class="section-title">Testimonial</h1>
+        <p>Let's see what our clients say about us</p>
+    </section>
+    
+
+    <section class="testimonial" id="testimonial">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Being new to the marketplace, CHI webinars and conferences have been critically important tools to spread our message. The CHI team has always been a genuine pleasure to work with</h3>
+                    <div class="testimoni-pic">
+                        <img src="images/person.jpg" alt="Person">
+                        <p>Jagadesh</p>
+                        
+                    </div>
+                    <span>Business Development</span>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="fas fa-quote-left"></i>
+                            <h3>I am really impressed by the quality of services I received from Flatworld Solutions. You were right on schedule, charged reasonable prices, were professional and courteous in dealings, and delivered items well before time. I have got a good e-commerce site for my products. My revenue has increased because of Flatworld and I will definitely use your services again.</h3>
+                            <div class="testimoni-pic">
+                                <img src="images/person.jpg" alt="Person">
+                                <p>satheesh</p>
+                                
+                            </div>
+                            <span>Software Developre</span>
+                        </div>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="fas fa-quote-left"></i>
+                            <h3>I want to begin by saying that changing industries in to tech is difficult but very rewarding; Skillspire made something that looked impossible and foreign easy by making it a step-by-step process that encouraged learning by having a very accessible instructor who while providing you with all the tools you need will let you work your own way to the solution.</h3>
+                            <div class="testimoni-pic">
+                                <img src="images/person.jpg" alt="Person">
+                                <p>Santhosh</p>
+                            </div>
+                            <span>Fullstack Developer</span>
+                        </div>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="fas fa-quote-left"></i>
+                            <h3>I learned a lot of things with which I didn't have enough practice in my job, broadening my vision. I believe that it was one giant leap for me in just one year, from “data analyst” to “data scientist”.  I have to thank our professors who were eager to learn and teach and are experts in their fields.</h3>
+                            <div class="testimoni-pic">
+                                <img src="images/person.jpg" alt="Person">
+                                <p>Mohan</p>
+                            </div>
+                            <span>Data Analyst</span>
+                        </div>
+                </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <h1 class="section-title">Career Advices</h1>
+        <p>Learn more career tips from company recruiters</p>
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <img src="images/sample2.jpg" alt="Blog1">
+                <h3>How to prepare for an interview</h3>
+                <p>Read the job description to thoroughly understand how the employer has described the position and the type of candidate they are looking for. Carefully review the keywords and key phrases the employer uses to describe their expectations. </p>
+            </div>
+            <div class="blog-card">
+                <img src="images/sample3.jpg" alt="Blog2">
+                <h3>Top skills to learn in 2024</h3>
+                <p>cybersecurity, cloud computing, data science and data analytics, artificial intelligence and machine learning, and blockchain.</p>
+            </div>
+            <div class="blog-card">
+                <img src="images/sample4.webp" alt="Blog3">
+                <h3>How to write a compelling resume</h3>
+                <p>Expanding your network of relationships early and often is the most effective tactic a scientist in training can adopt to ensure opportunities in the future. </p>
+            </div>
+            <div class="blog-card">
+                <img src="images/sample5.webp" alt="Blog3">
+                <h3>What to expect in an interview</h3>
+                <p>Whether you’re interviewing for a job, training or a qualification, the interview experience will be similar. A potential employer may not be expecting you to have done the job before, but they'll be looking for relevant experience or strengths. </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Job Portal</h3>
+            <p>Your gateway to a successful career</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Job Portal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        function searchJobs() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const jobCards = document.querySelectorAll('.job-card');
+
+            jobCards.forEach(card => {
+                const jobTitle = card.getAttribute('data-job-title').toLowerCase();
+                if (jobTitle.includes(searchInput)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function applyForJob(jobTitle) {
+            window.location.href = `apply.html?title=${encodeURIComponent(jobTitle)}`;
+        }
+    </script>
+</body>
+
+</html>
